@@ -4,11 +4,15 @@
   "newProjectRoot": "projects",
   "projects": {
     "app": {
+      "i18n": {
+        "sourceLocale": "es-CL"
+      },
       "projectType": "application",
       "schematics": {
         "@ionic/angular-toolkit:page": {
           "styleext": "scss",
           "standalone": true
+          
         }
       },
       "root": "",
@@ -126,7 +130,10 @@
     }
   },
   "cli": {
-    "schematicCollections": ["@ionic/angular-toolkit"]
+    "schematicCollections": [
+      "@ionic/angular-toolkit"
+    ],
+    "analytics": false
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

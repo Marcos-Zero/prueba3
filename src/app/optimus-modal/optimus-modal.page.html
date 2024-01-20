@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Agregar Precio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Ingrese el Valor</ion-label>
+    <ion-input type="number" [(ngModel)]="LugarAEliminar" placeholder="Valor"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="confirmar()">Confirmar</ion-button>
+  <ion-button expand="full" color="medium" (click)="cerrar()">Cancelar</ion-button>
+
+
+  <div *ngIf="LugarAEliminar">
+    Valor Formateado: {{ LugarAEliminar | currency:'USD':'symbol':'1.2-2' }}
+  </div>
+</ion-content>
